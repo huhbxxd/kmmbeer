@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.lmd.kmmbeer.Greeting
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +30,7 @@ fun GreetingView(text: String) {
     Text(text = text)
 }
 
-@Preview
+
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {

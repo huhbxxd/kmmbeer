@@ -4,7 +4,7 @@ object Versions {
     const val gradlePlugin = "7.3.0"
     const val kotlin = "1.8.20"
     const val compose = "1.5.0"
-    const val composeCompiler = "1.4.2"
+    const val composeCompiler = "1.4.7"
     const val coroutines = "1.7.0"
     const val serialization = "1.4.1"
     const val mviKotlin = "3.1.0"
