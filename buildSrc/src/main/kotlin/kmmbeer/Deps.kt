@@ -24,10 +24,8 @@ object Deps {
             const val ktorClientLogging = "io.ktor:ktor-client-logging:${Versions.ktor}"
 
             // Engines
-            const val ktorClientAndroid = "io.ktor:ktor-client-android:${Versions.ktor}"
+            const val ktorClientOkHttp = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
             const val ktorClientDarwin = "io.ktor:ktor-client-darwin:${Versions.ktor}"
-            const val ktorClientJava = "io.ktor:ktor-client-java:${Versions.ktor}"
-            const val ktorClientJs = "io.ktor:ktor-client-js:${Versions.ktor}"
         }
     }
 

@@ -49,7 +49,6 @@ kotlin {
                     api(materialIconsExtended)
                 }
 
-                // Ktor
                 with(Deps.Io.Ktor) {
                     api(ktorClientCore)
                     api(ktorSerializationKotlinxJson)
@@ -57,41 +56,33 @@ kotlin {
                     api(ktorClientLogging)
                 }
 
-                // Logback for ktor logging
                 implementation(Deps.Logback.logbackClassic)
 
-                // SqlDelight
                 with(Deps.CashApp.SQLDelight) {
                     api(coroutinesExtensions)
                     api(primitiveAdapters)
                 }
 
-                // Koin
                 with(Deps.Koin) {
                     api(core)
                     api(test)
                 }
 
-                // KotlinX Serialization Json
                 implementation(Deps.Org.JetBrains.Kotlinx.kotlinxSerializationJson)
 
-                // Coroutines
                 implementation(Deps.Org.JetBrains.Kotlinx.coroutinesCore)
 
-                // MVIKotlin
                 with(Deps.ArkIvanov.MVIKotlin) {
                     api(mvikotlin)
                     api(mvikotlinMain)
                     api(mvikotlinExtensionsCoroutines)
                 }
 
-                // Decompose
                 with(Deps.ArkIvanov.Decompose) {
                     api(decompose)
                     api(extensionsCompose)
                 }
 
-                // Image Loading
                 api(Deps.Github.imageLoader)
                 implementation(Deps.ArkIvanov.Essenty.lifecycle)
             }
@@ -105,13 +96,8 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                // Ktor
-                implementation(Deps.Io.Ktor.ktorClientAndroid)
-
-                // SqlDelight
+                implementation(Deps.Io.Ktor.ktorClientOkHttp)
                 implementation(Deps.CashApp.SQLDelight.androidDriver)
-
-                // Koin
                 implementation(Deps.Koin.android)
             }
         }
@@ -120,10 +106,7 @@ kotlin {
             dependsOn(commonMain)
 
             dependencies {
-                // Ktor
                 implementation(Deps.Io.Ktor.ktorClientDarwin)
-
-                // SqlDelight
                 implementation(Deps.CashApp.SQLDelight.nativeDriver)
             }
         }
